@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 class BulletDetector:
-    def __init__(self, model_path='weights/bullet_model.pt'):
+    def __init__(self, model_path='../weights/bullet_model.pt'):
         self.model = YOLO(model_path) 
 
     def get_video_info(self, video_path):
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     source = 0 
     
     # Inisialisasi detector
-    detector = BulletDetector('weights/bullet_model.pt')
+    detector = BulletDetector('../weights/bullet_model.pt')
     
     cap = cv2.VideoCapture(source)
     print("Menjalankan Test Deteksi... Tekan 'q' untuk keluar.")
